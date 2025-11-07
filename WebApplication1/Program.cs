@@ -1,8 +1,11 @@
 using WebApplication1.Data;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Services;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<APIContext>(options =>
     options.UseInMemoryDatabase("UserDB"));
+
+builder.Services.AddScoped<UserService>();
 
 // Add services to the container.
 

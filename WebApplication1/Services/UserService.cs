@@ -33,7 +33,6 @@ namespace WebApplication1.Services
             await _apiContext.SaveChangesAsync();
             return user;
         }
-        public async Task<User> RegistrarUserAsync(RegistrarUserDTOs dto);
         public string HashPassword(string password)
         {
             var sha256 = SHA256.Create();

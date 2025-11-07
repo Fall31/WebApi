@@ -18,11 +18,10 @@ namespace WebApplication1.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegistrarUserDTOs dto)
         {
-            throw new NotImplementedException();
             try
             {
                 var user = await _userService.RegistrarUserAsync(dto);
-                return Ok(new {message = "Usuario creado", user Id, user UserName});
+                return Ok(new {message = "Usuario creado"});
             }
             catch (Exception ex)
             {
